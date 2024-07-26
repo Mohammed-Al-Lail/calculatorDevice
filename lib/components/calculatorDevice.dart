@@ -8,7 +8,7 @@ import 'package:flutter/widgets.dart';
 // ignore: must_be_immutable
 class CalculatorDevice extends StatefulWidget {
 
-   CalculatorDevice({super.key});
+   const CalculatorDevice({super.key});
 
   @override
   State<CalculatorDevice> createState() => _CalculatorDeviceState();
@@ -231,11 +231,11 @@ void findResult(){
         
         children: [
 
-          SizedBox(height: 25,),
+          const SizedBox(height: 25,),
 
           ResultBox(expression: isInitial ? "0" : theExpression),
 
-          SizedBox(height: 25,),
+          const SizedBox(height: 25,),
 
           // 1st ROW
           Row( // in each row we will have 3 numbers and 1 operation
@@ -250,21 +250,19 @@ void findResult(){
 
               ),
               
-              Expanded(child: SizedBox()),
+              const Expanded(child: SizedBox()),
+
               CalculatorButton(
                 charhectar: '+',
                 width: 45,
                 color: operation == " + " ?  Colors.yellow : Colors.orange.shade700 ,
                 onTap: add 
-                  
-                  
-                 
-
+                
               ),
             ],
           ), // End of 1st Row 
 
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
 
           // 2nd ROW
           Row( // in each row we will have 3 numbers and 1 operation
@@ -298,7 +296,8 @@ void findResult(){
                 },
 
               ),
-              Expanded(child: SizedBox()),
+              const Expanded(child: SizedBox()),
+
               CalculatorButton(
                 charhectar: '-',
                 width: 45,
@@ -308,7 +307,7 @@ void findResult(){
             ],
           ), // end of 2nd row
 
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
 
           // 3rd ROW
           Row( // in each row we will have 3 numbers and 1 operation
@@ -342,7 +341,7 @@ void findResult(){
                 },
 
               ),
-              Expanded(child: SizedBox()),
+             const Expanded(child: SizedBox()),
               CalculatorButton(
                 charhectar: 'x',
                 width: 45,
@@ -353,7 +352,7 @@ void findResult(){
             ],
           ), // end of 3rd row
 
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
 
           // 4rh ROW
           Row( // in each row we will have 3 numbers and 1 operation
@@ -387,7 +386,7 @@ void findResult(){
                 },
 
               ),
-              Expanded(child: SizedBox()),
+              const Expanded(child: SizedBox()),
               CalculatorButton(
                 charhectar: '/',
                 width: 45,
@@ -398,14 +397,14 @@ void findResult(){
             ],
           ), // end of 4rh row
 
-          SizedBox(height: 2,),
+         const SizedBox(height: 2,),
 
           //5th ROW 
           Row(
 
             children: [
 
-              SizedBox(width: 10,),
+              const SizedBox(width: 10,),
 
               CalculatorButton(
                 charhectar: '0',
@@ -426,7 +425,7 @@ void findResult(){
               ),
 
 
-              Expanded(child: SizedBox(),),
+              const Expanded(child: SizedBox(),),
 
               CalculatorButton(
                 charhectar: '=',
